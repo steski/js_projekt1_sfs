@@ -1,0 +1,227 @@
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: rgb(200, 200, 150);
+}
+
+html {
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#221f27;
+    background-size:16px 16px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#wrapper {
+    width: 1300px;
+    height:900px;
+    padding:20px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+}
+
+a:active, a:focus, img:active, img:focus, button:active, button:focus, input:active, input:focus{
+    outline: none
+}
+
+#headline{
+    width:1200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin:0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#info1, #level, #neuesSpiel, #naechsteRunde {
+    display: none;
+}
+
+#info1, #level, #punkte, #fehlversuche, #spieldauer{
+    display: block;
+}
+
+#timer, #verbleibendeZeitLeiste {
+    width: 1200px;
+    margin:auto;
+}
+
+#verbleibendeZeitZahl {
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    display: none;
+    
+}
+
+#zeit {
+    width:1200px;
+    margin: 10px 10px 10px 50px;
+    display: flex;
+    text-align: center;
+}
+
+.buttonzeit {
+    cursor: pointer;
+    background-color: #FE642E;
+    height : 100px;
+    text-decoration: none;
+    margin: 15px;
+    border: none;
+    color: white;
+}
+.buttonzeit:hover {
+    background-color: #4CAF50;
+}
+
+#canvas{
+    width: 1200px;
+    height: 500px;
+    border:solid 10px rgb(214, 102, 149);
+    background-color: white;
+    margin: auto;
+    margin: 20px auto;
+}
+
+#unten {
+    margin:0 50px 20px 50px;
+    display:flex;
+}
+
+#spielSteuerung {
+    width:1200px;
+    display: flex;
+}
+
+.button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    height:60px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    border: none;
+    margin-right: 40px; 
+    display: inline-block;
+    color: white;
+}
+
+#raten {
+    display:flex;
+}
+
+.formen {
+    cursor: pointer;
+    width:150px;
+    height:100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    margin-left: 30px; 
+    display: none;
+    background-color: #FE642E;
+    color: white;
+}
+
+
+#ratentext {
+    margin-top: 30px;
+    text-align: center;
+    display: none;
+}
+
+/* animierter Fortschrittsbalken (progressbar) -> zum Starten s. .js */
+/* es liegen 2 innere Progress-Bars übereinander, die jeweils loslaufen, wenn sie eingeblendet werden */
+@keyframes bar-progress {
+    1% { width: 0%; background: red;}
+    30% { width: 30%; background: orange; }
+    50% { width: 50%; background: gold; }
+    70% { width: 70%; background: greenyellow; }
+    100% { width: 100%; background: #4CAF50; }
+} 
+
+#progressbar {
+    background-image: repeating-linear-gradient(
+        135deg,
+        rgba(169, 169, 169, .3),
+        rgba(169, 169, 169, .3) 10px,
+        rgba(169, 169, 169, .1) 10px,
+        rgba(169, 169, 169, .1) 20px
+    );
+    height: 15px;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 100px;
+    box-shadow: 0 1px 5px #444 inset, 1px 1px 1px grey;
+}
+#progressbar-inner {
+    display: block;
+    height: 15px;
+    width: 0%;
+    background: #4CAF50;
+    border-radius: 100px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    position: relative;
+    margin-top:10px;
+    /* mit auto-progress Aufruf der keyframe-Regeln, infinite macht animation zur Endlosschleife */
+    animation-name: bar-progress;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    display:none;
+}
+#progress-bar-inner {
+    display: block;
+    height: 15px;
+    width: 0%;
+    background: #4CAF50;
+    border-radius: 100px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    position: relative;
+    margin-top:-15px;
+    /* mit auto-progress Aufruf der keyframe-Regeln, infinite macht animation zur Endlosschleife */
+    animation-name: bar-progress;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    display:none;
+}
+/* Ende Balken */
+
+
+
+
+
+/* #quadrat, #rechteck, #kreis, #dreieck, #neueform{
+    background: #4CAF50;
+    margin-top: 10px;
+    margin-left: 50px;
+    display:none;
+    color: white;
+} */
+
+/* #quadrat {
+}
+
+#rechteck {
+}
+
+#kreis {
+}
+
+#dreieck {
+}
+
+#neueform {
+} */

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang = "de">
+
+    <head>
+       
+        <title>JavaScript</title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name = "description" content = "Progammieren mit JS">
+        <meta name = "keywords" content = "">
+        <link href = "css/style.css" rel = "stylesheet">
+    </head>
+
+    <body>
+      
+    <div id="wrapper">
+        <h1>S-F-S : SpeedFormSpotting</h1>
+        <div id="headline">
+            <!-- Info und Level anzeige -->
+            <p id = "level">LEVEL</p>
+            <p id = "info1">INFO</p>
+            <p id = "punkte">PUNKTE</p>
+            <p id = "fehlversuche">FEHLVERSUCHE</p>
+            <p id = "spieldauer">ZEIT</p>
+        </div>
+
+        <div id="timer">
+
+            <!-- Ampel-Balken -->
+            <div id="progressbar">
+                <span id="progressbar-inner" style="animation-duration: 20s;"></span>
+                <span id="progress-bar-inner" style="animation-duration: 20s;"></span>
+
+            </div>
+            <span id="verbleibendeZeitZahl">verbleibende Zeit</span>
+            
+        </div>
+        
+        <!-- Zeit Einstellung
+        Ist für Später geplant -->
+        <h2 id = "zeitinfo">Wie viel Zeit brauchst du pro Runde? </h2>
+        <div id = "zeit">
+            <button class="buttonzeit" id = "5s">5 Sekunden: Ich hab's drauf</button>
+            <button class="buttonzeit" id = "10s">10 Sekunden: Ich brauch ein bisschen</button>
+            <button class="buttonzeit" id = "20s">20 Sekunden: Nicht so schnell!</button>
+            <button class="buttonzeit" id = "30s">30 Sekunden: Immer mit der Ruhe!</button>
+            <button class="buttonzeit" id = "60s">60 Sekunden: Oma-Modus</button>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id = "canvas" width = "1200" height = "500"></canvas>
+
+        <!-- Starten und Neustarten Button -->
+        <div id="unten">
+            <div id = "spielSteuerung">
+                <button class="button" id ="spielStarten">Spiel starten</button>
+                <button class="button" id ="neuesSpiel">Neues Spiel</button>
+                <button class="button" id ="naechsteRunde">Nächste Runde</button>
+            </div>
+                <!-- Hier sind die Buttons zum Wählen des fehlendes Objektes
+                Buttons sind erst nach Ende der 2. Phase Sichtbar -->
+            <div id ="raten">
+                <span id="ratentext">Wähle die Form</span>
+                <button class="formen" id="tier">Tier</button>
+                <button class="formen" id="ufo">Ufo</button>
+                <button class="formen" id="gesicht">Gesicht</button>
+                <button class="formen" id="haus">Haus</button>
+            </div>
+    </div>
+    </div>  
+    <script src = "js/variabeln.js"></script>
+    <script src = "js/farben.js"></script>
+    <script src = "js/funktionen.js"></script>
+    <script src = "js/formen.js"></script>
+    <script src = "js/main.js"></script>
+    </body>
+
+</html>
