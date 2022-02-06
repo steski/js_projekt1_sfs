@@ -8,7 +8,6 @@ function button(id){
     return document.getElementById(id);
 };
 
-
 // Funktion zum erzeugen der Klone der Objekte bei Start
 function klonFabrik(){
     // Jede Funktion erzeugt die dazugehörigen klonen.
@@ -32,7 +31,6 @@ function klonFabrik(){
         klonHaus = Object.create(hausproto);
         klonHaus.init();
     };
-
 }; 
 
 // Funktion zum erzeugen der Klone der Objekte bei Ende
@@ -257,11 +255,6 @@ function timerZaehler() {
     },100);
 }; // Timer Funktion Ende
 
-
-
-
-
-
 // Zählt Sekunden hoch
 function timerZahlFunktion(){
     setInterval(sekundenZaehler,1000)
@@ -280,13 +273,13 @@ function sekundenZaehler(){
                 timerZahl++;
                 el("#spieldauer").innerHTML=timerZahl;
             };
-}
+};
 
 function randFarbe(){
     let index = Math.floor(Math.random() * allefarbRaeume.length);
     let farbe = allefarbRaeume[index];
     return farbe;
-}
+};
 
 // ##### TIMER ENDE #####
 
@@ -361,7 +354,6 @@ function canvasLeeren(){
     hausSammler = [];
 };
 
-
 // Audio Funktion Start
 function playAudio(soundName){
     sound = new Audio();
@@ -378,7 +370,6 @@ document.addEventListener('keydown',keyDown);
 let cheat;
 
 function keyDown(b){
-
         cheat = b.key;
         if (cheat == 'b'){
             console.log("Cheat Modus Aktiviert");

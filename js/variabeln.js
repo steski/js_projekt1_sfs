@@ -1,8 +1,5 @@
 // ################ VARIABLEN START ################
 
-// Für meine Übersicht wird jede Variable mit einem Inhalt deklariert, der Aufschluss über den Datentyp gibt ( z.B. 0 = Int, "string" = string)
-// Dies muss man nicht machen, allerdings finde ich es so übersichtlicher
-
 // Anzahl der Objekte zum Start des Spiels - int
 let tierAnzahlStart, gesichtAnzahlStart, ufoAnzahlStart, hausAnzahlStart = 0;
 // Anzahl der Objekte nach dem Start
@@ -18,19 +15,19 @@ let schwierigkeitID = 0;
 let punkte = 0;
 // Variabel für Fehlversuche - int
 let fehlversuche = 0;
-// timerZahlStopp als peudo Bool : 0 = Weiter, 1 = Stopp
+// wie Bool 0 = Weiter, 1 = Stopp
 let timerZahlStopp = 0;
 // Zähler für die gesamte Zeit
 let timerZahl = 0;
 // Hilfsvariablen für Punktebrechnung
 let timerZahlAlt = 0;
 let diff = 0;
-// soll wie Bool funktionieren, 1 = freundlich, 2 = traurig
+// wie Bool 1 = :), 2 = :()
 // Durch IF Abfrage in Proto Form
 let gesichtMund = 0;
-// Variabel für AnimationFrame(render)
+// Variabel AnimationFrame(render)
 let ani;
-// Variabel für den Timer. muss Außerhalb der Timer funktion deklariert werden, damit drauf zugegriffen werden kann
+// Variabel für Timer. muss Außerhalb der Timer funktion deklariert werden, damit drauf zugegriffen werden kann
 let balkenTimer;
 
 // ################ VARIABLEN ENDE ################

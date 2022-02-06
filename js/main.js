@@ -1,6 +1,5 @@
 (function(){
 
-
 // ############################ SPIELABLAUF FUNKTIONEN START #############################
 
 // Zurückstzen Start
@@ -30,7 +29,6 @@ function neuesSpiel(){
 
 // Spiel Starten Funktion, hier wird das Spiel gestartet
 // Countdown wird angezeigt
-
 
 const spielErstmaligStarten = async () => {
     // Relevante Buttons und Texte werden für den Spielstart geändert (Inhalt, Sichtbarkeit, Farbe)
@@ -190,6 +188,7 @@ function ufoFehlt(){
     // Rate Buttons nach Klick Unsichtbar machen
     rateButtonsUnsichtbar();
 };
+
 function gesichtFehlt(){
     // Richtig
     if (fehlendesObjekt == "Gesicht"){
@@ -213,6 +212,7 @@ function hausFehlt(){
     // Rate Buttons nach Klick Unsichtbar machen
     rateButtonsUnsichtbar(); 
 };
+
 // ##### Welche Form Fehlt? Ende ##### 
 
 // ##### Richtig oder Falsch Start#####
@@ -373,13 +373,11 @@ function zeitspeichern(){
     el('#zeit').style.display="none";
     el('#zeitinfo').innerHTML="Zeit gespeichert, es kann losgehen";
     el('#spielStarten').style.display="block";
-}
+};
 
 // ################ BUTTONS ENDE ################
 
-
 // ################### CANVAS TIMER ###################
-// Noch Auslagern?
 
 // Wird beim Start angezeigt
 canvasTimer("S-F-S");

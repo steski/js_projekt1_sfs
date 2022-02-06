@@ -12,8 +12,7 @@ let hausSammler = [];
 let co = el('#canvas');
 let ctx = co.getContext('2d');
 
-// Anmerkung: Formeln ( Grenzen zum Abprallen in der Move Funktion der Formen ) sind nicht mathematisch Korrekt. 
-// Hätte bei mir zuviel Zeit gekostet, daher kann es vorkommen, dass die Formen ein paar Pixel zu früh oder zu spät abprallen.
+// Anmerkung: Formeln (Grenzen zum Abprallen in der Move Funktion der Formen) sind nicht ganz mathematisch Korrekt. 
 
 // ################ PROTO OBJEKTE START ################
 // TIER START
